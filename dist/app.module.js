@@ -10,12 +10,21 @@ exports.AppModule = void 0;
 const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
+const apps_module_1 = require("./apps/apps.module");
+const quizzes_module_1 = require("./quizzes/quizzes.module");
+const questions_module_1 = require("./questions/questions.module");
+const options_module_1 = require("./options/options.module");
+const categories_module_1 = require("./categories/categories.module");
+const tags_module_1 = require("./tags/tags.module");
+const metadata_module_1 = require("./metadata/metadata.module");
+const users_module_1 = require("./users/users.module");
+const attempts_module_1 = require("./attempts/attempts.module");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
 exports.AppModule = AppModule = __decorate([
     (0, common_1.Module)({
-        imports: [],
+        imports: [apps_module_1.AppsModule, quizzes_module_1.QuizzesModule, questions_module_1.QuestionsModule, options_module_1.OptionsModule, categories_module_1.CategoriesModule, tags_module_1.TagsModule, metadata_module_1.MetadataModule, users_module_1.UsersModule, attempts_module_1.AttemptsModule],
         controllers: [app_controller_1.AppController],
         providers: [app_service_1.AppService],
     })
